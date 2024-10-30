@@ -140,6 +140,7 @@ def modeling():
         df = pd.merge(df1,df2,on='CustomerID')
         
         df.to_csv('/opt/airflow/data/backend.csv',index=False)
+        df.to_csv('/opt/airflow/backend/data/rfm_cluster.csv',index=False)
         
         df1 = rfmSeg
         df = pd.merge(df1,df2,on='CustomerID')
